@@ -14,12 +14,25 @@
 
 int main()
 {
-	char count('a');
-	while (count <= 'z')
+	int count(1);
+	
+	while (count <= 5)
 	{
-		std::cout << count << "_" << static_cast<int>(count) << ' ';
-		if (count == 'z')
-			std::cout << '\n';
+		int inner(1);
+		while (inner <= (5 - count))
+		{
+			std::cout << ' ';
+			std::cout << ' ';
+			++inner;
+		}
+		int tempCount(count);
+		while (tempCount >= 1)
+		{
+			std::cout << tempCount;
+			std::cout << ' ';
+			--tempCount;
+		}
+		std::cout << '\n';
 		++count;
 	}
 
