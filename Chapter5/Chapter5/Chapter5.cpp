@@ -3,45 +3,25 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include "animal.h"
 
-int caculate(int x, int y, char operations)
-{
-	switch (operations)
-	{
-		case '+':
-			return x + y;
-		case '-':
-			return x - y;
-		case '*':
-			return x * y;
-		case '/':
-			return x / y;
-		case '%':
-			return x % y;
 
-	}
-}
+Animal pig{ AnimalName::PIG,4 };
+Animal chicken{ AnimalName::CHICKEN,2 };
+Animal goat{ AnimalName::GOAT,4 };
+Animal cat{ AnimalName::CAT,4 };
+Animal dog{ AnimalName::DOG,4 };
+Animal ostrich{ AnimalName::OSTRICH,2 };
+
 
 
 
 
 int main()
 {
-	int x;
-	std::cout << "please input the first one number\n";
-	std::cin >> x;
-
-	char oprations;
-	std::cout << "please input the oprations\n";
-	std::cin >> oprations;
-
-	int y;
-	std::cout << "please input the second one number\n";
-	std::cin >> y;
-
-	std::cout << "your answer is " << caculate(x, y, oprations) << '\n';
-
-
+	printNumberOfLegs(pig);
+	printNumberOfLegs(chicken);
+	printNumberOfLegs(cat);
 
     return 0;
 }
