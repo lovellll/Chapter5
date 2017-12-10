@@ -3,15 +3,10 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include "animal.h"
 
 
-Animal pig{ AnimalName::PIG,4 };
-Animal chicken{ AnimalName::CHICKEN,2 };
-Animal goat{ AnimalName::GOAT,4 };
-Animal cat{ AnimalName::CAT,4 };
-Animal dog{ AnimalName::DOG,4 };
-Animal ostrich{ AnimalName::OSTRICH,2 };
+
+
 
 
 
@@ -19,9 +14,14 @@ Animal ostrich{ AnimalName::OSTRICH,2 };
 
 int main()
 {
-	printNumberOfLegs(pig);
-	printNumberOfLegs(chicken);
-	printNumberOfLegs(cat);
+	char count('a');
+	while (count <= 'z')
+	{
+		std::cout << count << "_" << static_cast<int>(count) << ' ';
+		if (count == 'z')
+			std::cout << '\n';
+		++count;
+	}
 
     return 0;
 }
